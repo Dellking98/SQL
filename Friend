@@ -1,0 +1,4 @@
+Select users.first_name, users.last_name, user2.first_name As friend_first_name, user2.last_name As friend_last_name
+From users
+Left Join friendships On users.id = friendships.users_id
+Left Join users as user2 On friendships.friend_id = user2.id;
